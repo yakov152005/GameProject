@@ -1,2 +1,11 @@
-package main;public class MainClass {
+package main;
+public class MainClass {
+    public MainClass(){
+        Game game = new Game();
+    }
+
+    public static void main(String[] args) {
+        MainClass mainClass = new MainClass();
+
+    }
 }
