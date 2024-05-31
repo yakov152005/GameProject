@@ -1,11 +1,11 @@
 package entities;
 import Finals.Final;
-import javax.imageio.ImageIO;
+import utilz.LoadSave;
+
 import java.awt.*;
 import java.awt.image.BufferedImage;
-import java.io.IOException;
-import java.io.InputStream;
-import static utils.Constants.PlayerConstants.*;
+
+import static utilz.Constants.PlayerConstants.*;
 
 public class Player extends Entity{
     private  BufferedImage[][] allAnimation;
@@ -17,10 +17,11 @@ public class Player extends Entity{
     private float playerSpeed = 2.0f;
 
 
-    public Player(float x, float y) {
-        super(x, y);
+    public Player(float x,float y,int width,int height) {
+        super(x, y,width,height);
         loadAnimations();
     }
+
 
     @Override
     public void update() {
@@ -47,7 +48,7 @@ public class Player extends Entity{
         }
     }
 
-    private void setAnimation() {
+    private void setAnimation() {//מתקפות ותזוזות
         int startAnimation = playerAction;
 
 
@@ -106,9 +107,8 @@ public class Player extends Entity{
     }
 
     private void loadAnimations() {
-        InputStream is = getClass().getResourceAsStream("/player_sprites.png");
-        try {
-            BufferedImage captainClownNose = ImageIO.read(is);
+
+            BufferedImage captainClownNose = LoadSave.getSpriteAtlas(LoadSave.PLAYER_ATLAS);
 
             this.allAnimation = new BufferedImage[9][6];
             for (int i = 0; i < allAnimation.length; i++) {
@@ -117,18 +117,6 @@ public class Player extends Entity{
                             (j * Final.WIDTH_CAPTAIN, i * Final.HEIGHT_CAPTAIN, Final.WIDTH_CAPTAIN, Final.HEIGHT_CAPTAIN);
                 }
             }
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }catch (IllegalArgumentException e){
-            System.out.println("The File NOT FOUND!");
-        }finally {
-            try {
-                is.close();
-            }catch (IOException e){
-                System.out.println(e.getMessage());
-            }
-        }
-
     }
 
     public boolean isLeft() {

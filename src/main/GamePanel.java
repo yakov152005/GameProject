@@ -1,19 +1,18 @@
 package main;
-import Finals.Final;
 import Inputs.KeyBoardInputs;
 import Inputs.MouseInputs;
 import javax.swing.*;
 import java.awt.*;
-
+import static Finals.Final.GAME_HEIGHT;
+import static Finals.Final.GAME_WIDTH;
 public class GamePanel extends JPanel {
     private MouseInputs mouseInputs;
     private Game game;
 
-    public GamePanel(Game game) {
 
+    public GamePanel(Game game) {
         this.mouseInputs = new MouseInputs(this);
         this.game = game;
-
         setPanelSize();
         addKeyListener(new KeyBoardInputs(this));
         addMouseListener(mouseInputs);
@@ -22,8 +21,9 @@ public class GamePanel extends JPanel {
     }
 
     private void setPanelSize() {
-        Dimension size = new Dimension(Final.WIDTH,Final.HEIGHT);
+        Dimension size = new Dimension(GAME_WIDTH, GAME_HEIGHT);
         setPreferredSize(size);
+        
     }
 
     public void updateGame(){

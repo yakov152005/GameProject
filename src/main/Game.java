@@ -1,8 +1,10 @@
 package main;
-
 import entities.Player;
+import levels.LevelManager;
 
 import java.awt.*;
+
+import static Finals.Final.*;
 
 public class Game implements  Runnable {
     private GameWindow gameWindow;
@@ -11,6 +13,7 @@ public class Game implements  Runnable {
     private final int FPS_SET = 120;
     private final int UPS_SET = 200;
     private Player player;
+    private LevelManager levelManager;
 
     public Game(){
         this.gamePanel = new GamePanel(this);
@@ -22,7 +25,8 @@ public class Game implements  Runnable {
 
     private void initClasses() {
         try {
-            player = new Player(200, 200);
+            player = new Player(200, 200,(int)(WIDTH_CAPTAIN * SCALE), (int)( HEIGHT_CAPTAIN * SCALE));
+            levelManager = new LevelManager(this);
         }catch (NullPointerException e){
             System.out.println(" ");
         }catch (Exception e ){
@@ -37,10 +41,12 @@ public class Game implements  Runnable {
 
     public void updates() {
         player.update();
+        levelManager.update();
     }
 
     public void render(Graphics g){
         try {
+            levelManager.draw(g);
             player.render(g);
         }catch (NullPointerException e){
             System.out.println();
@@ -93,6 +99,7 @@ public class Game implements  Runnable {
 
     public void windowFocusLost(){
         player.resetDirBoolean();
+
     }
 
     public Player getPlayer(){
