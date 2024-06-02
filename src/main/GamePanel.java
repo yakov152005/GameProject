@@ -3,8 +3,8 @@ import Inputs.KeyBoardInputs;
 import Inputs.MouseInputs;
 import javax.swing.*;
 import java.awt.*;
-import static Finals.Final.GAME_HEIGHT;
-import static Finals.Final.GAME_WIDTH;
+import static finals.Final.GAME_HEIGHT;
+import static finals.Final.GAME_WIDTH;
 public class GamePanel extends JPanel {
     private MouseInputs mouseInputs;
     private Game game;

@@ -1,5 +1,6 @@
 package entities;
-import Finals.Final;
+import finals.Final;
+import utilz.HelpMethods;
 import utilz.LoadSave;
 
 import java.awt.*;
@@ -15,11 +16,15 @@ public class Player extends Entity{
     private boolean moving = false, attacking = false, attackingJump = false, attackingJump2 = false,
     hit = false, jump = false;
     private float playerSpeed = 2.0f;
+    private  int[][] levelData;
+    private float xDrawOffSet = 21*Final.SCALE;
+    private float yDrawOffSet = 4*Final.SCALE;
 
 
     public Player(float x,float y,int width,int height) {
         super(x, y,width,height);
         loadAnimations();
+        initHitBox(x,y,20*Final.SCALE,28*Final.SCALE);
     }
 
 
@@ -31,8 +36,9 @@ public class Player extends Entity{
     }
 
     public void render(Graphics g){
-        g.drawImage(allAnimation[playerAction][animationIndex],(int)x,(int)y,Final.WIDTH_CAPTAIN*2,Final.HEIGHT_CAPTAIN*2,null);
-
+        g.drawImage(allAnimation[playerAction][animationIndex],(int)(hitBox.x - xDrawOffSet),(int)(hitBox.y - yDrawOffSet),
+                Final.WIDTH_CAPTAIN*2,Final.HEIGHT_CAPTAIN*2,null);
+        drawHitBox(g);
     }
 
     private void updateAnimationTick() {
@@ -87,29 +93,40 @@ public class Player extends Entity{
 
     private void updatePosition() {//  בשביל שאם לוחצים על שני מקשים בו זמנית אז לא יזוז השחקן ומאפשר לזוז באלכסון
         moving = false;
+        if (!left && !right && !up && !down){
+            return;
+        }
+
+        float xSpeed = 0, ySpeed = 0;
 
         if (left && !right){
-            x -= playerSpeed;
-            moving = true;
+            xSpeed =- playerSpeed;
         }else if (right && !left){
-            x += playerSpeed;
-            moving = true;
+            xSpeed = playerSpeed;
         }
 
         if (up && !down){
-            y -= playerSpeed;
-            moving = true;
+            ySpeed =- playerSpeed;
         } else if (down && !up) {
-            y += playerSpeed;
+            ySpeed = playerSpeed;
+        }
+
+//        if (HelpMethods.canMoveHere(x+xSpeed,y+ySpeed,width,height,levelData)){
+//            this.x += xSpeed;
+//            this.y += ySpeed;
+//            moving = true;
+//        }
+        if (HelpMethods.canMoveHere(hitBox.x+xSpeed,hitBox.y+ySpeed,hitBox.width,hitBox.height,levelData)){
+            hitBox.x += xSpeed;
+            hitBox.y += ySpeed;
             moving = true;
         }
 
     }
 
+
     private void loadAnimations() {
-
             BufferedImage captainClownNose = LoadSave.getSpriteAtlas(LoadSave.PLAYER_ATLAS);
-
             this.allAnimation = new BufferedImage[9][6];
             for (int i = 0; i < allAnimation.length; i++) {
                 for (int j = 0; j < allAnimation[i].length; j++) {
@@ -117,6 +134,10 @@ public class Player extends Entity{
                             (j * Final.WIDTH_CAPTAIN, i * Final.HEIGHT_CAPTAIN, Final.WIDTH_CAPTAIN, Final.HEIGHT_CAPTAIN);
                 }
             }
+    }
+
+    public void loadLevelData(int[][] levelData){
+        this.levelData = levelData;
     }
 
     public boolean isLeft() {

@@ -1,12 +1,11 @@
 package levels;
-import Finals.Final;
 import main.Game;
 import utilz.LoadSave;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
 
-import static Finals.Final.*;
+import static finals.Final.*;
 import static utilz.LoadSave.*;
 
 public class LevelManager {
@@ -46,5 +45,9 @@ public class LevelManager {
     }
     public void update(){
 
+    }
+
+    public Level getLevelOne() {
+        return levelOne;
     }
 }

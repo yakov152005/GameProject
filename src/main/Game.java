@@ -4,7 +4,7 @@ import levels.LevelManager;
 
 import java.awt.*;
 
-import static Finals.Final.*;
+import static finals.Final.*;
 
 public class Game implements  Runnable {
     private GameWindow gameWindow;
@@ -25,8 +25,9 @@ public class Game implements  Runnable {
 
     private void initClasses() {
         try {
-            player = new Player(200, 200,(int)(WIDTH_CAPTAIN * SCALE), (int)( HEIGHT_CAPTAIN * SCALE));
             levelManager = new LevelManager(this);
+            player = new Player(200, 200,(int)(WIDTH_CAPTAIN * SCALE), (int)( HEIGHT_CAPTAIN * SCALE));
+            player.loadLevelData(levelManager.getLevelOne().getLevelData());
         }catch (NullPointerException e){
             System.out.println(" ");
         }catch (Exception e ){
