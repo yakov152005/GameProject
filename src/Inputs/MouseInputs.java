@@ -1,4 +1,5 @@
 package Inputs;
+import gamestates.GameState;
 import main.GamePanel;
 
 import java.awt.event.MouseEvent;
@@ -15,11 +16,13 @@ public class MouseInputs implements MouseListener , MouseMotionListener {
     }
     @Override
     public void mouseClicked(MouseEvent e) {
-        if (e.getButton() == MouseEvent.BUTTON1){
-            gamePanel.getGame().getPlayer().setAttacking(true);
-        }
-        if (e.getButton() == MouseEvent.BUTTON3){
-            gamePanel.getGame().getPlayer().setAttackingJump(true);
+        switch (GameState.state) {
+            case MENU:
+                gamePanel.getGame().getMenu().mouseClicked(e);
+                break;
+            case PLAYING:
+                gamePanel.getGame().getMenu().mouseClicked(e);
+                break;
         }
     }
 
