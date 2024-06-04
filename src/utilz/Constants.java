@@ -1,6 +1,18 @@
 package utilz;
 
+import finals.Final;
+
 public class Constants {
+
+    public static class UI{
+        public static class Buttons{
+            public static final int B_WIDTH_DEFAULT = 140;
+            public static final int B_HEIGHT_DEFAULT = 56;
+            public static final int B_WIDTH = (int) (B_WIDTH_DEFAULT * Final.SCALE);
+            public static final int B_HEIGHT = (int) (B_HEIGHT_DEFAULT * Final.SCALE);
+        }
+    }
+
     public static class Directions{
         public static final int LEFT = 0;
         public static final int UP = 1;
@@ -8,8 +20,6 @@ public class Constants {
         public static final int DOWN = 3;
 
     }
-
-
     public static class PlayerConstants{
         public static final int IDLE = 0;
         public static final int RUNNING = 1;
@@ -22,7 +32,6 @@ public class Constants {
         public static final int ATTACK_JUMP_2 = 8;
 
         public static int getSpriteAmount(int playerAction){
-
             switch (playerAction){
                 case RUNNING:
                     return 6;

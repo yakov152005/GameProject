@@ -2,6 +2,7 @@ package main;
 import gamestates.GameState;
 import gamestates.Menu;
 import gamestates.Playing;
+import gamestates.State;
 
 import java.awt.*;
 
@@ -31,16 +32,21 @@ public class Game implements  Runnable {
         gameLoopThread = new Thread(this);
         gameLoopThread.start();
     }
+
+
     public void updates() {
         switch (GameState.state){
             case MENU:
                 menu.update();
                 break;
-
             case PLAYING:
                 playing.update();
                 break;
+            case OPTIONS:
 
+                break;
+            case QUIT:
+                System.exit(0);
             default:
                 break;
         }
