@@ -27,7 +27,7 @@ public class Menu extends State implements StateMethods{
         menuWidth = (int) (backGroundImage.getWidth() * Final.SCALE);
         menuHeight = (int) (backGroundImage.getHeight() * Final.SCALE);
         menuX = (Final.GAME_WIDTH / 2) - (menuWidth / 2);
-        menuY = (int) (45 / Final.SCALE);
+        menuY = 100; // (int) (45 / Final.SCALE);
 
     }
 

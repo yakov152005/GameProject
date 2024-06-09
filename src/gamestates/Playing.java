@@ -2,6 +2,7 @@ package gamestates;
 import entities.Player;
 import levels.LevelManager;
 import main.Game;
+import ui.PauseOverLay;
 
 import java.awt.*;
 import java.awt.event.KeyEvent;
@@ -13,6 +14,8 @@ import static finals.Final.SCALE;
 public class Playing extends State implements StateMethods{
     private Player player;
     private LevelManager levelManager;
+    private PauseOverLay pauseOverLay;
+    private boolean paused;
 
     public Playing(Game game) {
         super(game);
@@ -24,6 +27,7 @@ public class Playing extends State implements StateMethods{
             levelManager = new LevelManager(game);
             player = new Player(200, 200,(int)(WIDTH_CAPTAIN * SCALE), (int)( HEIGHT_CAPTAIN * SCALE));
             player.loadLevelData(levelManager.getLevelOne().getLevelData());
+            pauseOverLay = new PauseOverLay();
         }catch (NullPointerException e){
             System.out.println(" ");
         }catch (Exception e ){
@@ -41,6 +45,7 @@ public class Playing extends State implements StateMethods{
     public void draw(Graphics g) {
         levelManager.draw(g);
         player.render(g);
+        pauseOverLay.draw(g);
     }
 
     @Override

@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6a1c15e7-9d8c-4874-bc91-61b99f781bac" name="Changes" comment="yes" />
+    <list default="true" id="6a1c15e7-9d8c-4874-bc91-61b99f781bac" name="Changes" comment="yes">
+      <change afterPath="$PROJECT_DIR$/res/pause_menu.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ui/PauseOverLay.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gamestates/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gamestates/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gamestates/Playing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gamestates/Playing.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/MainClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/MainClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utilz/LoadSave.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utilz/LoadSave.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -40,6 +48,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/קוד/Code - Java/practice-02/GameProject/res&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -48,6 +57,11 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\קוד\Code - Java\practice-02\GameProject\res" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -79,6 +93,17 @@
       <workItem from="1717432868572" duration="10140000" />
       <workItem from="1717522496070" duration="35000" />
       <workItem from="1717525455211" duration="6097000" />
+      <workItem from="1717535937463" duration="22000" />
+      <workItem from="1717536654784" duration="43000" />
+      <workItem from="1717536785924" duration="120000" />
+      <workItem from="1717536970555" duration="7000" />
+      <workItem from="1717587652137" duration="784000" />
+      <workItem from="1717589896237" duration="277000" />
+      <workItem from="1717609707459" duration="37000" />
+      <workItem from="1717714438355" duration="2052000" />
+      <workItem from="1717868401024" duration="17000" />
+      <workItem from="1717926690701" duration="315000" />
+      <workItem from="1717947686549" duration="53000" />
     </task>
     <task id="LOCAL‎-00001" summary="yes">
       <option name="closed" value="true" />
@@ -128,7 +153,15 @@
       <option name="project" value="LOCAL‎" />
       <updated>1717531568765</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL‎-00007" summary="yes">
+      <option name="closed" value="true" />
+      <created>1717535946407</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL‎-00007" />
+      <option name="project" value="LOCAL‎" />
+      <updated>1717535946408</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -138,5 +171,16 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="yes" />
     <option name="LAST_COMMIT_MESSAGE" value="yes" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/gamestates/Menu.java</url>
+          <line>20</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
