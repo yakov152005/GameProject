@@ -5,12 +5,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6a1c15e7-9d8c-4874-bc91-61b99f781bac" name="Changes" comment="yes">
-      <change afterPath="$PROJECT_DIR$/res/pause_menu.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/PauseOverLay.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/background_menu.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/ball.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/big_clouds.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/cannon_atlas.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/completed_sprite.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/crabby_sprite.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/death_screen.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/health_power_bar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/level_one_data_long.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/objects_sprites.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/options_background.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/playing_bg_img.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/potions_sprites.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/small_clouds.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/sound_button.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/trap_atlas.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/urm_buttons.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/volume_buttons.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ui/PauseButton.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ui/SoundButton.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gamestates/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gamestates/Menu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gamestates/Playing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gamestates/Playing.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/MainClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/MainClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/PauseOverLay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/PauseOverLay.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utilz/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utilz/Constants.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/utilz/LoadSave.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utilz/LoadSave.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -104,6 +123,9 @@
       <workItem from="1717868401024" duration="17000" />
       <workItem from="1717926690701" duration="315000" />
       <workItem from="1717947686549" duration="53000" />
+      <workItem from="1717976194328" duration="33000" />
+      <workItem from="1718051583388" duration="17000" />
+      <workItem from="1718051915666" duration="3102000" />
     </task>
     <task id="LOCAL‎-00001" summary="yes">
       <option name="closed" value="true" />
@@ -161,7 +183,15 @@
       <option name="project" value="LOCAL‎" />
       <updated>1717535946408</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL‎-00008" summary="yes">
+      <option name="closed" value="true" />
+      <created>1717976220106</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL‎-00008" />
+      <option name="project" value="LOCAL‎" />
+      <updated>1717976220106</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
